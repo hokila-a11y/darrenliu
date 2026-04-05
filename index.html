@@ -256,10 +256,6 @@
         font-style: italic;
       }
 
-      .normal-text {
-        font-style: normal;
-      }
-
       .about-text p {
         font-size: 1.1rem;
         color: var(--text-dark);
@@ -719,6 +715,9 @@
           display: none;
         }
       }
+        .normal-text {
+        font-style: normal; !important;
+      }
     </style>
   </head>
   <body>
@@ -782,7 +781,8 @@
     </section>
 
     <!-- Core Competencies -->
-  <p class="normal-text">
+  <div class="normal-text">
+      <p class="normal-text">
     <section id="competencies" style="background: white">
       <div class="section-title">Core Competencies</div>
       <div class="competencies-grid reveal active">
@@ -1128,3 +1128,4 @@
         <div id="yt_article_summary_close_button" class="yt_article_summary_close_button">×</div>
     </div><div id="glasp-extension-toast-container" style="position: fixed; top: 32px; right: 16px; z-index: 2147483647; display: none; flex-direction: column; align-items: flex-end; height: 0px; width: auto; margin: 0px; padding: 0px;"></div><div class="glasp-extension-toaster" style="display: block; width: 320px; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; top: 40px; right: 24px; z-index: 9999;"><template shadowrootmode="open"><div class="glasp-extension" style="font-family: inherit;"></div></template></div></body><div class="glasp-extension" style="display: block; width: unset; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; bottom: 16px; right: 16px; z-index: 9999;"><div class="glasp-extension" style="font-family: inherit;"></div></div></html>
 </p>
+</div>
