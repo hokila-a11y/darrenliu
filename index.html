@@ -793,44 +793,56 @@
 .btn-submit:hover {
   background-color: #d49800;
 }
-/* Dark background styling for Contact section */
-.dark-background {
-  background-color: #0a0a0a; /* matches your site's dark footer */
-  color: #ffffff;
-  padding: 80px 0;
+/* Optional Step 3 — Spacing adjustments */
+.contact-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* Two-column layout for first/last name */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.dark-background .section-title {
-  color: #EAAA00; /* WVU Gold */
+/* Make all inputs full width */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 
-.dark-background .contact-intro {
-  color: #dddddd;
+/* Improve spacing */
+.form-group {
+  margin-bottom: 20px;
 }
 
-.dark-background label {
-  color: #ffffff;
+/* Match your WVU branding */
+.contact-form label {
+  font-weight: 600;
+  color: #ffffff; /* adjust if using light background */
 }
 
-.dark-background input,
-.dark-background textarea {
+.contact-form select {
   background-color: #1a1a1a;
-  border: 1px solid #444;
   color: #ffffff;
+  border: 1px solid #444;
 }
 
-.dark-background input::placeholder,
-.dark-background textarea::placeholder {
-  color: #bbbbbb;
+.contact-form textarea {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #444;
 }
-
-.dark-background .btn-submit {
-  background-color: #EAAA00;
-  color: #002855;
-}
-
-.dark-background .btn-submit:hover {
-  background-color: #d49800;
+.contact {
+  background-color: #0a0a0a;
+  padding: 80px 0;
+  color: #ffffff;
 }
 
     </style>
@@ -1028,23 +1040,48 @@
     </p>
 
     <form action="https://formspree.io/f/xlgoavea" method="POST" class="contact-form">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required>
-      </div>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
-      </div>
+  <div class="form-row two-col">
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <input id="first-name" name="first-name" type="text" required>
+    </div>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
+    <div class="form-group">
+      <label for="last-name">Last Name</label>
+      <input id="last-name" name="last-name" type="text" required>
+    </div>
+  </div>
 
-      <button type="submit" class="btn-submit">Send Message</button>
-    </form>
+  <div class="form-group">
+    <label for="organization">Organization</label>
+    <input id="organization" name="organization" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <select id="subject" name="subject" required>
+      <option value="">Select an option</option>
+      <option value="consulting">Curriculum Services</option>
+      <option value="keynote">Keynote or Training</option>
+      <option value="press">Research Services</option>
+      <option value="research">Others</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">How Can I Help?</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+
+  <button type="submit" class="btn-submit">Submit</button>
+</form>
+
   </div>
 </section>
 
