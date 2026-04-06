@@ -729,6 +729,71 @@
         .normal-text {
         font-style: normal; !important;
       }
+    /* Contact Section */
+.contact-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.contact-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #002855; /* WVU Navy */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #002855;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.btn-submit {
+  background-color: #EAAA00; /* WVU Gold */
+  color: #002855;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #d49800;
+}
+
     </style>
   </head>
   <body>
@@ -937,6 +1002,34 @@
         </div>
       </div>
     </section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-intro">
+      I welcome inquiries related to teaching, research collaborations, health policy, and leadership initiatives.
+    </p>
+
+    <form action="https://formspree.io/f/xlgoavea" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
     <footer>
       <p>© 2026 Darren Liu, DrPH. All Rights Reserved.</p>
